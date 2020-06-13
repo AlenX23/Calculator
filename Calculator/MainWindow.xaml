@@ -1,0 +1,61 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="Calculator" Height="535" Width="335" MinWidth="335" MinHeight="535">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="TEXT_BLOCK" TextAlignment="Right"  VerticalAlignment="Center" FontSize="30"  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Style="{DynamicResource tb_Style}" >0</TextBlock>
+
+        <Button x:Name="sign"  Grid.Row="6" Grid.Column="0" Click="Button_Click" Style="{DynamicResource but_Style}">+/-</Button>
+        <Button Grid.Row="6" Grid.Column="1" Click="Button_Click" Style="{DynamicResource but_Style}">0</Button>
+        <Button x:Name="dec" Grid.Row="6" Grid.Column="2" Click="Button_Click" Style="{DynamicResource but_Style}">,</Button>
+        <Button x:Name="evaluate" Grid.Row="6" Grid.Column="3" Click="Button_Click" Style="{DynamicResource but_Style}">=</Button>
+
+        <Button Content="1"  Grid.Row="5" Grid.Column="0" Click="Button_Click" Style="{DynamicResource but_Style}"></Button>
+        <Button Grid.Row="5" Grid.Column="1" Click="Button_Click" Style="{DynamicResource but_Style}">2</Button>
+        <Button Grid.Row="5" Grid.Column="2" Click="Button_Click" Style="{DynamicResource but_Style}">3</Button>
+        <Button x:Name="addition" Grid.Row="5" Grid.Column="3" Click="Button_Click" Style="{DynamicResource but_Style}">+</Button>
+
+        <Button Grid.Row="4" Grid.Column="0" Click="Button_Click" Style="{DynamicResource but_Style}">4</Button>
+        <Button Grid.Row="4" Grid.Column="1" Click="Button_Click" Style="{DynamicResource but_Style}">5</Button>
+        <Button Grid.Row="4" Grid.Column="2" Click="Button_Click" Style="{DynamicResource but_Style}">6</Button>
+        <Button x:Name="substraction" Grid.Row="4" Grid.Column="3" Click="Button_Click" Style="{DynamicResource but_Style}">-</Button>
+
+        <Button Grid.Row="3" Grid.Column="0" Click="Button_Click" Style="{DynamicResource but_Style}">7</Button>
+        <Button Grid.Row="3" Grid.Column="1" Click="Button_Click" Style="{DynamicResource but_Style}">8</Button>
+        <Button Grid.Row="3" Grid.Column="2" Click="Button_Click" Style="{DynamicResource but_Style}">9</Button>
+        <Button x:Name="division" Grid.Row="3" Grid.Column="3" Click="Button_Click" Style="{DynamicResource but_Style}">/</Button>
+
+        <Button x:Name="Sin" Grid.Row="2" Grid.Column="0" Click="Button_Click" Style="{DynamicResource but_Style}">sin</Button>
+        <Button x:Name="Cos" Grid.Row="2" Grid.Column="1" Click="Button_Click" Style="{DynamicResource but_Style}">cos</Button>
+        <Button x:Name="sqrt" Content="√&#xD;&#xA;" Grid.Row="2" Grid.Column="2" Click="Button_Click" Style="{DynamicResource but_Style}"></Button>
+        <Button x:Name="pow" Grid.Row="2" Grid.Column="3" Click="Button_Click" Style="{DynamicResource but_Style}">x^y</Button>
+
+        <Button x:Name="tan" Grid.Row="1" Grid.Column="0" Click="Button_Click" Style="{DynamicResource but_Style}">tan</Button>
+        <Button x:Name="log" Grid.Row="1" Grid.Column="1" Click="Button_Click" Style="{DynamicResource but_Style}">log</Button>
+        <Button x:Name="clear" Grid.Row="1" Grid.Column="2" Click="Button_Click" Style="{DynamicResource but_Style}">C</Button>
+        <Button x:Name="back" Grid.Row="1" Grid.Column="3" Click="Button_Click" Style="{DynamicResource but_Style}">CE</Button>
+        
+    </Grid>
+</Window>
